@@ -128,7 +128,7 @@ public:
 
         if (!jsonFile()) return help();
 
-        gifName = basename(fileName);
+        gifName = fileName.substr(0, fileName.find_last_of("."));
         gifName.append(".gif");
         return 0;
     }
